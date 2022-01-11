@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +13,70 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* ----------------NEWBLOG-------------- */
+.newBlog-container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Bungee Inline',
+  cursive;
+  
+}
+h1{
+  color: #046582;
+  font-size: 35px;
+  
+}
+form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    flex-direction: column;
+  margin-top: 50px;
+}
+#newBlog-img{
+  background-color: #046582;
+  border-radius: 50%;
+  height: 208px;
+  width: 208px;
+  padding: 10px;
+}
+#title{
+  height: 50px;
+  width: 400px;
+  margin-bottom: 10px;
+  text-align: justify;
+  border-radius: 5px;
+  border-width:thin;
+}
+
+
+#ımgUrl {
+  height: 50px;
+  width: 400px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-width:thin;
+
+
+}
+#content{
+  resize: none;
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+#newBlog-btn{
+  width: 400px;
+  margin-top: 5px;
+  padding: 5px 0px 5px 0px;
+  background-color: #046582;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+}
+/* --------------------NEWBLOG-------------------------- */

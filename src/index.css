@@ -80,3 +80,31 @@ form {
   margin-bottom: 20px;
 }
 /* --------------------NEWBLOG-------------------------- */
+/* --------------------DASHBOARD----------------------------- */
+
+#loading-img{
+  margin-left: 550px;
+  width: 350px;
+  height: 350px;
+}
+.dashboard-loading{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  margin: 10px;
+}
+.card-body{
+  margin: 15px;
+}
+#card-img{
+  object-fit: cover;
+  height: 150px;
+  max-width: 100%;
+}
+#dashboard-text{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Bungee Inline',
+  cursive;
+}

@@ -83,7 +83,7 @@ form {
 /* --------------------DASHBOARD----------------------------- */
 
 #loading-img{
-  margin-left: 550px;
+  margin-left: 50px;
   width: 350px;
   height: 350px;
 }
@@ -93,9 +93,14 @@ form {
   justify-content: center;
   overflow: hidden;
   margin: 10px;
+  font-family: 'Bungee Inline',
+  cursive;
+  
 }
 .card-body{
-  margin: 15px;
+  margin: 25px;
+  /* border: 2px solid red; */
+  
 }
 #card-img{
   object-fit: cover;
@@ -105,6 +110,14 @@ form {
 #dashboard-text{
   text-align: center;
   font-weight: bold;
-  font-family: 'Bungee Inline',
-  cursive;
+  
 }
+.list-group-flush{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.body{
+  background-color:rgb(220, 237, 231);
+}
+

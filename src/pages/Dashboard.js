@@ -3,11 +3,20 @@ import BlogCard from '../components/BlogCard';
 import loading from "../assests/loading.gif"
 import { getDatabase,onValue,query,ref} from "firebase/database"
 import { Button, Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import moment from "moment"
+import {FaHeart} from "react-icons/fa"
+import {FiMessageSquare} from "react-icons/fi"
 
 
-const Dashboard = () => {
+
+
+
+
+
+const Dashboard = (item) => {
     const [isLoading, setIsLoading] = useState();
     const [card, setCard] = useState();
+    const published_date = item
 
     useEffect(() => {
         setIsLoading(true)
@@ -24,7 +33,8 @@ const Dashboard = () => {
             setIsLoading(false)
         })
     },[])
-    const dateTime = moment( dateTime, 'MM-DD-YYYY HH:mm:ss',true).format("YYYY-MM-DD HH:mm:ss");
+    
+    
 
     return (
         <div className='dashboard-card'>
@@ -39,18 +49,19 @@ const Dashboard = () => {
                 (
                     card?.map((item, index) => {
                        return(
-                        <Card className='card-body' key={index} style={{maxWidth:'20rem', maxHeight:"20rem"}}>
+                        <Card className='card-body' key={index} style={{maxWidth:'20rem', maxHeight:"25rem"}}>
                             <Card.Img id='card-img' variant="top" src={item.ımgUrl} />
-                            <Card.Body>
-                                <Card.Title>{item.title}</Card.Title>
-                                {dateTime}
+                            <Card.Body className='body'>
+                                <Card.Title style={{color:"blue", fontSize:"28px"}}>{item.title}</Card.Title>
+                                <Card.Title style={{fontSize:"15px", color:"grey"}}> {moment(published_date).format("MMM DD, YYYY")}</Card.Title>
+                               
                                 <Card.Text>
                                 {item.content}
                                 </Card.Text>
                             </Card.Body>
                             <ListGroup className="list-group-flush">
-                                <ListGroupItem>Cras justo odio</ListGroupItem>
-    
+                                <ListGroupItem><FaHeart/> 0 </ListGroupItem>
+                                <ListGroupItem><FiMessageSquare/> 0 </ListGroupItem>
                             </ListGroup>
                         </Card>
                        )

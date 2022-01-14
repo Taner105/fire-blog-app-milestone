@@ -121,3 +121,37 @@ form {
   background-color:rgb(220, 237, 231);
 }
 
+
+/* ------------------------REGİSTER------------------------------------ */
+.register{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://picsum.photos/800/800");
+}
+.register-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  /* border: 1px solid red; */
+  width: 600px;
+  padding: 10px 0 10px 0;
+  background-color: #fff;
+  border-radius: 5px;
+  
+ }
+ .blog-img{
+   background-color: #046582;
+   width: 250px;
+   margin-left: 180px;
+   border-radius: 50%;
+   padding: 10px;
+  
+ }
+ 
+/* .register-form h1{
+  text-align:end;
+  
+} */

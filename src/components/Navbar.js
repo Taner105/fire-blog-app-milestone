@@ -8,7 +8,7 @@ const Navbar = () => {
     const navigate = useNavigate();
      const context = useContext(AuthContext)
     return (
-        <div>
+        <div style={{position:"sticky", top:"0", zIndex:"1"}}>
             <nav className='navbar navbar-expend-lg navbar-light bg-primary'>
                 <div className='container-fluid'>
                    <a className='navbar-brand' onClick={() => navigate("/")}><img style={{cursor:"pointer",width:"50px",height:"50px",padding:"5px"}} src={cw} alt="Clarusway" /></a> 
@@ -16,7 +16,7 @@ const Navbar = () => {
                    <div className='buttons'>
                        {
                            context.currentUser ? (
-                               <h3>{currentUser.displayName}</h3>
+                               <h3>{currentUser.email}</h3>
                            ):(
                             <button
                             type='button'
@@ -29,12 +29,24 @@ const Navbar = () => {
                        }
                        {
                            context.currentUser ? (
-                               <button
-                               type='button'
-                               className='ms-2 btn btn-outline-light'
-                               >
-                                   Logout
-                               </button>
+                               //burada değişiklik olabilir
+                              <form>
+                                    <button
+                                    type='button'
+                                    className='ms-2 btn btn-outline-light'
+                               >    Logout
+                                    </button>
+                                    <button
+                                    type='button'
+                                    className='ms-2 btn btn-outline-light'
+                               >    Logout
+                                    </button>
+                                    <button
+                                    type='button'
+                                    className='ms-2 btn btn-outline-light'
+                               >    Logout
+                                    </button>
+                              </form>
                            ):(
                                <button
                                type='button'
